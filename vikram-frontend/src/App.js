@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import Navbar from './Navbar';
+import About from './About';
+import Training from './Training';
+import Rates from './Rates';
+import Contact from './Contact'
 
 function App() {
 
@@ -24,9 +30,20 @@ function App() {
     }
   ]
   return (
-    <div className="App">
-      <h1> Vikram Wellness</h1>
-    </div>
+    <Router>
+        <div className="App">
+          <h1> Vikram Wellness</h1>
+          <Navbar />
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/training" component={Training}/>
+          <Route exact path="/rates" component={Rates}/>
+          <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
+
+          </Route>
+          <Route></Route>
+        </div>
+    </Router>
+    
   );
 }
 
