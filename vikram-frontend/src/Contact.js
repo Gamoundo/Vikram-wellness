@@ -7,7 +7,7 @@ function Contact(props) {
     return (arr.map((element) => {
         return(
             <div className="project">
-                <h3> {element.area}</h3>
+                <h3 className="area"> {element.area}</h3>
                 <p> {element.address}</p>
                 <p> {element.phone}</p>
                 
@@ -21,8 +21,11 @@ function Contact(props) {
     
     return(
         <div>
-            <h1>Locations</h1>
+            <h1>Contact Us</h1>
+            <div className="contact">
             {displayLocations(props.locations)}
+            </div>
+            
         </div>
     )
 }
