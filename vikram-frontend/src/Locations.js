@@ -7,10 +7,16 @@ function Locations(props) {
     return (arr.map((element) => {
         return(
             <div className="project">
-                <h3> {element.area}</h3>
-                <p> {element.address}</p>
-                <p> {element.phone}</p>
                 
+                <div style= {{backgroundImage: `url(${element.img})`}}>
+                    <h3> {element.area}</h3>
+                     <p> {element.address}</p>
+                     <p> {element.phone}</p>
+                     <button> See on Map</button>
+                </div>
+                <div>
+                    <p> {element.blurb}</p>
+                </div>
             </div>
         )
     }
