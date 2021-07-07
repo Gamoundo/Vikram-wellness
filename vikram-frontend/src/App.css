@@ -76,3 +76,22 @@ h1 {
   background-color: palevioletred;
   text-align: right;
 }
+
+.profilePic {
+  width: 10rem;
+  height: 10rem;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 3rem;
+  border-radius: 2rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 4rem;
+  border-radius: 2rem;
+}
