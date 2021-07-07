@@ -55,7 +55,8 @@ function Team(props) {
     
     return(
         <div>
-            <h1>Meet the Team</h1>
+            <h1>Meet The Team</h1>
+            <h3> Click on a picture to learn more about your instructor!</h3>
             <div className="members">
             {displayMembers(members)}
             </div>
