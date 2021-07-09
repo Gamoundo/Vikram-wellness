@@ -8,6 +8,7 @@ import Rates from './Rates';
 import Contact from './Contact';
 import Locations from './Locations';
 import Team from './Team';
+import News from './News';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/training" component={Training}/>
           <Route exact path="/rates" component={Rates}/>
           <Route exact path="/team" component={Team}/>
+          <Route exact path="/press" component={News}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 
           </Route>
