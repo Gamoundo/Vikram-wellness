@@ -45,7 +45,7 @@ function News(props) {
                 <img className="profilePic" src={element.img} alt="profile pic" />
                 
                 <p> {element.title}</p>
-                <a target='_blank' href={element.link}> Read More</a>
+                <a className="link" target='_blank' href={element.link}> Read More</a>
                 
             </div>
         )

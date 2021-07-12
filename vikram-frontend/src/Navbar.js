@@ -10,11 +10,76 @@ const link = {
     color: 'pink',
   }
 
+  const navItems = [
+    {
+      comp: "/shop",
+      title: "Shop"
+    },
+    {
+      comp: "/about",
+      title: "About Us"
+    },
+    {
+      comp: "/classes",
+      title: "Classes"
+    },
+    {
+      comp: "/training",
+      title: "Training and Education"
+    },
+
+    {
+      comp: "/wellness",
+      title: "Manage your Pain"
+    },
+    {
+      comp: "/retreats",
+      title: "Retreats"
+    },
+    {
+      comp: "/rates",
+      title: "Rates"
+    },
+    {
+      comp: "/contact",
+      title: "Contact"
+    },
+    {
+      comp: "/register",
+      title: "Register"
+    },
+    {
+      comp: "/login",
+      title: "Login"
+    },
+  ]
+
+  const displayNavItems = (arr) => {
+    return (arr.map((element) => {
+        return(
+          <NavLink
+          to=  {element.comp}
+          
+          exact
+          
+          style={link}
+          
+          activeStyle={{
+            background: 'purple'
+          }}
+          >{element.title}</NavLink>
+        )
+    }
+    )
+
+    )
+   }
+
 function Navbar() {
 
     return(
         <div className="nav">
-            <NavLink
+            {/* <NavLink
           to="/about"
           
           exact
@@ -112,7 +177,8 @@ function Navbar() {
           activeStyle={{
             background: 'green'
           }}
-          >Login</NavLink>
+          >Login</NavLink> */}
+          {displayNavItems(navItems)}
         </div>
     )
 }
