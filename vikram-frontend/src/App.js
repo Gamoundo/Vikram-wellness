@@ -49,6 +49,34 @@ function App() {
 
           </Route>
           <Route exact path= '/locations' render={ routerProps => <Locations {...routerProps} locations={locations}/>}></Route>
+        <div className="footer">
+            <div className="footerLeft">
+                <h1> Dript</h1>
+                <p> Powered by Bikram Yoga Works</p>
+                <div>
+                  <a className="link" target='_blank' href= 'https://www.youtube.com/channel/UCCYo4ol02kqpFEJ9MQ9POcw'> youtube</a>
+                  <a className="link" target='_blank' href= 'https://www.facebook.com/BikramYogaWorks'> facebook</a>
+                  <a className="link" target='_blank' href= 'https://www.instagram.com/BikramYogaWorks/'> instagram</a>
+                  <a className="link" target='_blank' href= 'https://twitter.com/BikramYogaWorks'> twitter</a>
+                </div>
+            </div>
+            <div className="footerRight">
+              <div>
+                  <div>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/contact'> Contact Us</a>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/press'> Press</a>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Locations</a>
+                  </div>
+                  <div>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> FAQ</a>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Careers</a>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Gift Card</a>
+                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Donate</a>
+                  </div>
+              </div>
+            </div>
+
+        </div>
         </div>
     </Router>
     
