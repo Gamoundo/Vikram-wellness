@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom"
@@ -9,6 +10,9 @@ import Contact from './Contact';
 import Locations from './Locations';
 import Team from './Team';
 import News from './News';
+import Careers from './Careers';
+import Faq from './Faq';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
 
@@ -38,13 +42,15 @@ function App() {
   return (
     <Router>
         <div className="App">
-          <h1> Vikram Wellness</h1>
+          <h1> Bikram Wellness</h1>
           <Navbar />
           <Route exact path="/about" component={About}/>
           <Route exact path="/training" component={Training}/>
           <Route exact path="/rates" component={Rates}/>
           <Route exact path="/team" component={Team}/>
           <Route exact path="/press" component={News}/>
+          <Route exact path="/careers" component={Careers}/>
+          <Route exact path="/faq" component={Faq}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 
           </Route>
@@ -54,24 +60,27 @@ function App() {
                 <h1> Dript</h1>
                 <p> Powered by Bikram Yoga Works</p>
                 <div>
-                  <a className="link" target='_blank' href= 'https://www.youtube.com/channel/UCCYo4ol02kqpFEJ9MQ9POcw'> youtube</a>
-                  <a className="link" target='_blank' href= 'https://www.facebook.com/BikramYogaWorks'> facebook</a>
-                  <a className="link" target='_blank' href= 'https://www.instagram.com/BikramYogaWorks/'> instagram</a>
-                  <a className="link" target='_blank' href= 'https://twitter.com/BikramYogaWorks'> twitter</a>
+                  <a className="link" target='_blank' href= 'https://www.youtube.com/channel/UCCYo4ol02kqpFEJ9MQ9POcw'> <i class="fa fa-youtube-square fa-4x"></i></a>
+                  <a className="link" target='_blank' href= 'https://www.facebook.com/BikramYogaWorks'> <i class="fa fa-facebook-square fa-4x"></i></a>
+                  <a className="link" target='_blank' href= 'https://www.instagram.com/BikramYogaWorks/'> <i class="fa fa-instagram-square fa-4x"></i></a>
+                  <a className="link" target='_blank' href= 'https://twitter.com/BikramYogaWorks'> <i class="fa fa-twitter-square fa-4x"></i></a>
                 </div>
             </div>
             <div className="footerRight">
               <div>
                   <div>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/contact'> Contact Us</a>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/press'> Press</a>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Locations</a>
+                  <a className="link" href= 'http://localhost:3000/contact'> Contact Us</a>
+                  <a className="link" href= 'http://localhost:3000/press'> Press</a>
+                  <a className="link" href= 'http://localhost:3000/locations'> Locations</a>
                   </div>
                   <div>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> FAQ</a>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Careers</a>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Gift Card</a>
-                  <a className="link" target='_blank' href= 'http://localhost:3000/locations'> Donate</a>
+                    <ul className="list">
+                      <a className="link"  href= 'http://localhost:3000/faq'> FAQ</a>
+                      <a className="link"  href= 'http://localhost:3000/careers'> Careers</a>
+                      <a className="link"  href= 'http://localhost:3000/locations'> Gift Card</a>
+                      <a className="link"  href= 'http://localhost:3000/locations'> Donate</a>
+                    </ul>
+                  
                   </div>
               </div>
             </div>
