@@ -12,6 +12,8 @@ import Team from './Team';
 import News from './News';
 import Careers from './Careers';
 import Faq from './Faq';
+import Retreats from './Retreats';
+import Shop from './Shop';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -50,6 +52,8 @@ function App() {
           <Route exact path="/team" component={Team}/>
           <Route exact path="/press" component={News}/>
           <Route exact path="/careers" component={Careers}/>
+          <Route exact path="/retreats" component={Retreats}/>
+          <Route exact path="/shop" component={Shop}/>
           <Route exact path="/faq" component={Faq}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 

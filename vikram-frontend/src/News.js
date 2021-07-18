@@ -15,25 +15,8 @@ function News(props) {
             img: "https://image.flaticon.com/icons/png/512/16/16467.png",
             link: "https://www.wcvb.com/article/cityline-sunday-feb-17-2019-heart-health-month-bikram-yoga/26329617",
             date: "February 17, 2019"
-        },
-        {
-            title: "Tina",
-            img: "https://image.flaticon.com/icons/png/512/16/16467.png",
-            link: "instructor",
-            date: ""
-        },
-        {
-            title: "Dr. Omekongo Dibinga",
-            img: "https://image.flaticon.com/icons/png/512/16/16467.png",
-            link: "director",
-            
-        },
-        {
-            name: "",
-            img: "https://image.flaticon.com/icons/png/512/16/16467.png",
-            link: "owner",
-            date: ""
-        },
+        }
+        
     ]
 
 

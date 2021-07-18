@@ -97,7 +97,7 @@ h1 {
 .member {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  
   padding: 4rem 4rem;
   border-radius: 2rem;
 }
