@@ -107,3 +107,19 @@ h1 {
   flex-direction: column;
   
 }
+
+.classLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.tresClasses {
+width: 33vw;
+height: 40vh;
+background-color: purple;
+color: whitesmoke;
+}
+
+.tresClasses p {
+  color:white,
+}

@@ -20,8 +20,8 @@ const link = {
       title: "About Us"
     },
     {
-      comp: "/classes",
-      title: "Classes"
+      comp: "/virtual-studio",
+      title: "Take Classes"
     },
     {
       comp: "/training",

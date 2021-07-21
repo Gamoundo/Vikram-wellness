@@ -14,6 +14,7 @@ import Careers from './Careers';
 import Faq from './Faq';
 import Retreats from './Retreats';
 import Shop from './Shop';
+import Virtual from './VirtualStudio';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <Route exact path="/retreats" component={Retreats}/>
           <Route exact path="/shop" component={Shop}/>
           <Route exact path="/faq" component={Faq}/>
+          <Route exact path="/virtual-studio" component={Virtual}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 
           </Route>
@@ -64,10 +66,10 @@ function App() {
                 <h1> Dript</h1>
                 <p> Powered by Bikram Yoga Works</p>
                 <div>
-                  <a className="link" target='_blank' href= 'https://www.youtube.com/channel/UCCYo4ol02kqpFEJ9MQ9POcw'> <i class="fa fa-youtube-square fa-4x"></i></a>
-                  <a className="link" target='_blank' href= 'https://www.facebook.com/BikramYogaWorks'> <i class="fa fa-facebook-square fa-4x"></i></a>
-                  <a className="link" target='_blank' href= 'https://www.instagram.com/BikramYogaWorks/'> <i class="fa fa-instagram-square fa-4x"></i></a>
-                  <a className="link" target='_blank' href= 'https://twitter.com/BikramYogaWorks'> <i class="fa fa-twitter-square fa-4x"></i></a>
+                  <a className="link" target='_blank' href= 'https://www.youtube.com/channel/UCCYo4ol02kqpFEJ9MQ9POcw'> <img src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png" height="60px" width="60px" alt="youtube" /></a>
+                  <a className="link" target='_blank' href= 'https://www.facebook.com/BikramYogaWorks'> <img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-15.png" height="40px" width="30px" alt="facebook"/></a>
+                  <a className="link" target='_blank' href= 'https://www.instagram.com/BikramYogaWorks/'> <img src="https://www.freepnglogos.com/uploads/download-instagram-png-logo-20.png" height="40px" width="40px" alt="instagram" /></a>
+                  <a className="link" target='_blank' href= 'https://twitter.com/BikramYogaWorks'> <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" height="40px" width="40px" alt="twitter"/></a>
                 </div>
             </div>
             <div className="footerRight">
