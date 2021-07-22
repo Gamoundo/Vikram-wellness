@@ -32,7 +32,7 @@ class Virtual extends React.Component {
                  <h1>{element.name}</h1>
                  <p style={{color: "white"}}> {element.info}</p>
                  </a>
-                 
+                 {element.name === "in-studio" && <a target='_blank' style={{color: "white"}} href="https://bikramyogawellnessworks.com/img/BYW_Safety_V2.pdf"> Our Covid Safety Guidelines</a>}
              </div>
             )
         }
