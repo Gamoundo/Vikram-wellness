@@ -75,6 +75,62 @@ class Virtual extends React.Component {
         })
       }
 
+      classSchedule= [
+        {
+           name: 'Bikram Yoga(Virtual)',
+           instructor: "Helena",
+           time: "4:00am - 5:30am",
+            
+        },
+        {
+            name: 'Bikram Yoga(Virtual)',
+            instructor: "Steve",
+            time: "4:00pm - 5:30pm",
+             
+         },
+         {
+            name: 'Bikram Yoga(Virtual)',
+            instructor: "Judy",
+            time: "8:00am - 9:30am",
+             
+         },
+         {
+            name: 'Bikram Yoga(Virtual)',
+            instructor: "Tim",
+            time: "10:00am - 11:30am",
+             
+         },
+         {
+            name: 'Bikram Yoga(Virtual)',
+            instructor: "Helena",
+            time: "4:00pm - 5:30pm",
+             
+         },
+      ]
+
+      displayclassSchedule = (arr) => {
+        return (arr.map((element) => {
+            return(
+             <div className="sidebarItem">
+                 
+                 <h4>{element.name}</h4>
+                 <p>{element.time}</p>
+                 <p> {element.instructor}</p>
+
+                 <button>  View Details</button>
+                 <button> Book </button>
+                 
+             </div>
+            )
+        }
+        )
+    
+        )
+       }
+
+
+
+
 
     displayClasses = (arr) => {
         return (arr.map((element) => {
@@ -140,7 +196,7 @@ class Virtual extends React.Component {
                 <h1> Classes</h1>
                 <p> Sign up for live or virtual classes.</p>
                 <div className="sidebar">
-
+                    {this.displayclassSchedule(this.classSchedule)}
                 </div>
                 <p> Check out more in studio and virtual classes.</p>
                 <button> SEE ALL CLASSES</button>   

@@ -141,5 +141,24 @@ background-color: purple;
   text-align: right;
   width: 70vw;
   height: 42vh;
-  background-color: peru;
+  background-color: orange;
+}
+
+.sidebar {
+  background-color: wheat;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.sidebarItem {
+  display: inline-block;
+  width: 25vw;
+  height: 60vh;
+  color: white;
+  background-color: tomato;
+  margin: 2rem;
+  text-align: left;
+  border-radius: 5px;
+  
+  text-decoration: none;
 }

@@ -104,11 +104,70 @@ const displayBenefits = (arr) => {
     )
 }
 
+const classPackages= [
+    {
+        name: "Virtual Class",
+        price: "$20",
+        condition: "*Not In Studio"
+    },
+    {
+        name: "Single Class",
+        price: "$35",
+        condition: "*Includes Mat"
+    },
+    {
+        name: "5-Class Pass",
+        price: "$120",
+        condition: "*expires after 2 months"
+    },
+    {
+        name: "10-Class Pass",
+        price: "$240",
+        condition: "*expires after 3 months"
+    },
+    {
+        name: "Month Unlimited",
+        price: "$249",
+        condition: "*no contract"
+    }
+]
+
+const displayClassPackages = (arr) => {
+    return (arr.map((element) => {
+        return(
+         <div>
+             <diV>
+                <h3>{element.name}</h3>
+                <p style={{color: "orange"}}> {element.condition}</p>
+             </diV>
+             
+             <div>
+                <h3> {element.price}</h3>
+                <button> Buy Now</button>
+             </div>
+             
+             
+         </div>
+        )
+    }
+    )
+
+    )
+   }
+
+
     return(
         <div>
-            <h1>Rates</h1>
-            {displayBenefits(packages)}
+            <div>
+                <h1>Rates and Packages</h1>
+                {displayBenefits(packages)}
+            </div>
+            <div>
+                <h1> Class Packages</h1>
+                {displayClassPackages(classPackages)}
+            </div>
         </div>
+        
     )
 }
 
