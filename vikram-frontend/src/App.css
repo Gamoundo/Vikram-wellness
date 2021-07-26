@@ -159,6 +159,11 @@ background-color: purple;
   margin: 2rem;
   text-align: left;
   border-radius: 5px;
+  white-space: normal;
   
   text-decoration: none;
+}
+
+.retreatp {
+  text-align: left;
 }
