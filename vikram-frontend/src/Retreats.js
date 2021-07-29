@@ -1,8 +1,10 @@
 import React from 'react' 
+import DeleteBtn from './DeleteBtn'
+import { useHistory } from "react-router-dom";
 
 function Retreats() {
-    
-    const vacations=[
+    let history= useHistory()
+    let vacations=[
         {
             name: 'Bali',
             img: '',
@@ -29,11 +31,16 @@ function Retreats() {
         }
     ]
   
-const recentVacation=[]
+let recentVacation=[]
 recentVacation.push(vacations.pop())
-console.log(recentVacation)
 
-  const  displayVacations = (arr) => {
+
+const updateVacations = (arr) => {
+    vacations = arr
+    history.push('/retreats')
+}
+  
+const  displayVacations = (arr) => {
         return (arr.map((element) => {
             return(
              <div className="sidebarItem">
@@ -42,7 +49,7 @@ console.log(recentVacation)
                  <p> {element.date}</p>
                  <img src={element.img} width="100px" height="100px" alt={element.name}/> 
                  <p> {element.info}</p>
-                 
+                 <DeleteBtn  arr={arr} obj={element} change={updateVacations}/>
                 {arr.length === 1 && <button> Book Now</button>}
                  
                  
@@ -68,6 +75,7 @@ console.log(recentVacation)
                 <p className="retreatp">Whether it’s mountains or beaches, tropics or tundras, our wellness adZENtures offer the perfect space to reconnect with yourself and others while exploring new lands, cultures, sounds, tastes, and sights. We have partnered with The Trip Wish List to curate unforgettable luxury travel experiences that will make you the envy of all your friends.</p>
                 <p className="retreatp">Retreats Include: Daily yoga, Luxury accommodation, Some meals, Curated experiences and Ground transportation.</p>
                 <p className="retreatp">For more info visit: <a href="https://yogaenblanc.net/">yogaenblanc.net</a></p>
+                <a href="https://bikramyogawellnessworks.com/img/YEB_Bermuda_Brochure.pdf" className="roundedLink"> Download Digital Brochure</a>
             </div>
 
             <div>

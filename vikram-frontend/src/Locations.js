@@ -6,9 +6,9 @@ function Locations(props) {
    const displayLocations = (arr) => {
     return (arr.map((element) => {
         return(
-            <div className="locations">
+            <div className="locations" style= {{backgroundImage: `url(${element.img})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain'}}>
                 
-                <div  style= {{backgroundImage: `url(${element.img})`, backgroundRepeat: 'no-repeat', width: '100%', height: '250px'}}>
+                <div className="cInfo" >
                     <h3> {element.area}</h3>
                      <p> {element.address}</p>
                      <p> {element.phone}</p>
