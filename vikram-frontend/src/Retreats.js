@@ -1,10 +1,10 @@
-import React from 'react' 
+import React, { useState } from 'react' 
 import DeleteBtn from './DeleteBtn'
 import { useHistory } from "react-router-dom";
 
 function Retreats() {
     let history= useHistory()
-    let vacations=[
+    const [vacations, setVacations]= useState([
         {
             name: 'Bali',
             img: '',
@@ -21,7 +21,7 @@ function Retreats() {
             name: 'Morocco',
             img: '',
             date: 'March 28th - 1st, 2020',
-            info: ""
+            info: "blah blah blah"
         },
         {
             name: 'Yoga en Blanc in Bermuda',
@@ -30,31 +30,34 @@ function Retreats() {
             info: "A community-driven event centered around the healing art of yoga. Meet us in the triangle from November 12 – 15, 2020!"
         }
     ]
+    )
   
 let recentVacation=[]
-recentVacation.push(vacations.pop())
+recentVacation.push(vacations[vacations.length-1])
 
 
 const updateVacations = (arr) => {
-    vacations = arr
+    setVacations(arr)
     history.push('/retreats')
 }
   
 const  displayVacations = (arr) => {
         return (arr.map((element) => {
+        if (arr[arr.length-1] !== element || arr.length == 1) {
             return(
-             <div className="sidebarItem">
-                 
-                 <h4>{element.name}</h4>
-                 <p> {element.date}</p>
-                 <img src={element.img} width="100px" height="100px" alt={element.name}/> 
-                 <p> {element.info}</p>
-                 <DeleteBtn  arr={arr} obj={element} change={updateVacations}/>
-                {arr.length === 1 && <button> Book Now</button>}
-                 
-                 
-             </div>
-            )
+                <div className="sidebarItem">
+                    
+                    <h4>{element.name}</h4>
+                    <p> {element.date}</p>
+                    <img src={element.img} width="100px" height="100px" alt={element.name}/> 
+                    <p> {element.info}</p>
+                    <DeleteBtn  arr={arr} obj={element} change={updateVacations}/>
+                   {arr.length === 1 && <button> Book Now</button>}
+                    
+                    
+                </div>
+               )
+        }    
         }
         )
     
