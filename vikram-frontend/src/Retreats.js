@@ -1,6 +1,7 @@
 import React, { useState } from 'react' 
 import DeleteBtn from './DeleteBtn'
 import { useHistory } from "react-router-dom";
+import AddVacation from './AddBtn';
 
 function Retreats() {
     let history= useHistory()
@@ -33,39 +34,86 @@ function Retreats() {
     )
   
 let recentVacation=[]
-recentVacation.push(vacations[vacations.length-1])
+vacations && recentVacation.push(vacations[vacations.length-1])
+
+const [recent, setRecent]= useState([
+ recentVacation[0]
+]
+
+)
 
 
-const updateVacations = (arr) => {
+const deleteVacations = (arr) => {
     setVacations(arr)
+    
+    setRecent(arr[arr.length-1])
+    
+    history.push('/retreats')
+}
+
+const addVacations = (obj) => {
+    setVacations(vacations.push(obj))
     history.push('/retreats')
 }
   
 const  displayVacations = (arr) => {
-        return (arr.map((element) => {
-        if (arr[arr.length-1] !== element || arr.length == 1) {
-            return(
-                <div className="sidebarItem">
-                    
-                    <h4>{element.name}</h4>
-                    <p> {element.date}</p>
-                    <img src={element.img} width="100px" height="100px" alt={element.name}/> 
-                    <p> {element.info}</p>
-                    <DeleteBtn  arr={arr} obj={element} change={updateVacations}/>
-                   {arr.length === 1 && <button> Book Now</button>}
-                    
-                    
-                </div>
-               )
-        }    
-        }
+        
+    return (arr.map((element) => {
+            
+                if (arr[arr.length-1] !== element || arr.length === 1) {
+                    return(
+                        <div className="sidebarItem">
+                            
+                            <h4>{element.name}</h4>
+                            <p> {element.date}</p>
+                            <img src={element.img} width="100px" height="100px" alt={element.name}/> 
+                            <p> {element.info}</p>
+                            <DeleteBtn  arr={arr} obj={element} change={deleteVacations}/>
+                           {arr.length === 1 && <button> Book Now</button>}
+                            
+                            
+                        </div>
+                       ) 
+                }    
+                }  
+            
+        
         )
     
         )
+    
        }
 
+       const  displayRecent = (arr) => {
+        
+        return (arr.map((element) => {
+                
+                    if (arr[arr.length-1] === element) {
+                        return(
+                            <div className="sidebarItem">
+                                
+                                <h4>{element.name}</h4>
+                                <p> {element.date}</p>
+                                <img src={element.img} width="100px" height="100px" alt={element.name}/> 
+                                <p> {element.info}</p>
+                                <DeleteBtn  arr={arr} obj={element} change={deleteVacations}/>
+                                <button> Book Now</button>
+                                
+                                
+                            </div>
+                           ) 
+                    }    
+                    }  
+                
+            
+            )
+        
+            )
+        
+           }
 
 
+console.log(recent)
 
     
     
@@ -83,17 +131,17 @@ const  displayVacations = (arr) => {
 
             <div>
                 <h1> Upcoming Retreats</h1>
-                {displayVacations(recentVacation)}
+                {recent !== undefined && displayRecent(vacations)}
             </div>
 
             <div>
                 <h1> Past Retreats</h1>
                 <div className="sidebar"> 
-                    {displayVacations(vacations)}
+                    {vacations.length !== 0 && displayVacations(vacations)}
                 </div>
             </div>
             
-            
+            {/* <AddVacation add={addVacations} /> */}
         </div>
     )
 }
