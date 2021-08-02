@@ -1,75 +1,76 @@
-// import React, { useState } from 'react';
-// import Modal from "react-bootstrap/Modal"
+import React, { useState } from 'react';
 
-// function AddVacation(props) {
 
-//     const [show, setShow] = useState(false);
-//     const handleClose = () =>  setShow(false);
-//     const handleShow = () =>  setShow(true);
+function AddVacation(props) {
 
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         console.log(e.target)
+    const [show, setShow] = useState("");
 
-//      let newPost = {
-//             name: e.target.name.value,
-//             image: e.target.image.value,
-//             date: e.target.date.value,
-//             info: e.target.info.value
-//         }
-
-//         props.add(newPost)
-
-//     }
-
-//     return (
+    const handleClose = () =>  setShow("");
+    const handleShow = () =>  setShow( <div>
         
-//         <div>
-//             <button variant="primary" onClick={handleShow}>
-//         A New Retreat
-//       </button>
-            
-            
-//             <Modal className="form" show={show}>
-//             <Modal.Header closeButton onClick={handleClose}>
-//                 <Modal.Title id="Joy">
-//                     Set a new destination
-//                 </Modal.Title>
-//             </Modal.Header>
-//             <Modal.Body>
-//                 <form onSubmit={handleSubmit}>
-//                     <div>
-//                     <input type="text" name="name" />
-//                     <label htmlFor="name">Name</label> 
-//                     </div>
-//                     <div>
-//                     <input type="textarea" name="info" />
-//                     <label htmlFor="info">Info</label> 
-//                     </div>
-//                     <div>
-//                     <input type="text" name="date" />
-//                     <label htmlFor="date">Date</label> 
-//                     </div>
-//                     <div>
-//                     <input type="file" name="image" accept="image/png, image/jpeg" />
-//                     <label htmlFor="image">Image</label> 
-//                     </div>
-                    
-//                     <input type="submit" value="Post" onClick={handleClose} />
-                    
-                     
-//                 </form>
-//             </Modal.Body>
-//         </Modal>
-//         </div>
         
+        
+        <div className="form" show={show}>
+            <div>
+                <button onClick={handleClose}> X</button>
+                <h1>Set a new destination </h1>
+                <form onSubmit={handleSubmit}>
+                <div>
+                <input type="text" name="name" />
+                <label htmlFor="name">Name</label> 
+                </div>
+                <div>
+                <input type="textarea" name="info" />
+                <label htmlFor="info">Info</label> 
+                </div>
+                <div>
+                <input type="text" name="date" />
+                <label htmlFor="date">Date</label> 
+                </div>
+                <div>
+                <input type="file" name="image" accept="image/png, image/jpeg" />
+                <label htmlFor="image">Image</label> 
+                </div>
+                
+                <input type="submit" value="Post" onClick={handleClose} />
+                
+                 
+            </form>
+            </div>
+        </div>
+        
+        
+    </div>);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target)
 
+     let newPost = {
+            name: e.target.name.value,
+            image: e.target.image.value,
+            date: e.target.date.value,
+            info: e.target.info.value
+        }
+
+        props.add(newPost)
+
+    }
+
+    return (
+        
+        
+    <div>
+        <button variant="primary" onClick={handleShow}>
+    A New Retreat
+  </button>
+        {show}
+    </div>
 
         
-//     )
+    )
 
 
-// }
+}
 
-// export default AddVacation;
+export default AddVacation;

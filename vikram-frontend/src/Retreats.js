@@ -141,7 +141,7 @@ console.log(recent)
                 </div>
             </div>
             
-            {/* <AddVacation add={addVacations} /> */}
+            <AddVacation add={addVacations} />
         </div>
     )
 }

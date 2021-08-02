@@ -181,3 +181,13 @@ background-color: purple;
   width: 40vw;
   padding: 2rem 2rem;
 }
+
+.form {
+  width: 20rem;
+  background-color: beige;
+  color: palevioletred;
+  margin: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  
+}
