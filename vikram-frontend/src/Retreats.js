@@ -51,8 +51,9 @@ const deleteVacations = (arr) => {
     history.push('/retreats')
 }
 
-const addVacations = (obj) => {
-    setVacations(vacations.push(obj))
+const addVacations = (array) => {
+    setVacations(array)
+    setRecent(array[array.length-1])
     history.push('/retreats')
 }
   
@@ -141,7 +142,7 @@ console.log(recent)
                 </div>
             </div>
             
-            <AddVacation add={addVacations} />
+            <AddVacation arr={vacations} add={addVacations} />
         </div>
     )
 }

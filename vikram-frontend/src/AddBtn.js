@@ -45,15 +45,17 @@ function AddVacation(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(e.target)
-
+        let newArr;
      let newPost = {
             name: e.target.name.value,
             image: e.target.image.value,
             date: e.target.date.value,
             info: e.target.info.value
         }
+        console.log(newPost)
 
-        props.add(newPost)
+        newArr = props.arr.push(newPost)
+        props.add(newArr)
 
     }
 
