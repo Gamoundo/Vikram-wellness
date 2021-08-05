@@ -1,11 +1,12 @@
 import React, { useState } from 'react' 
-import Register from './Register'
+
+import SignupForm from './SignupForm'
 
 function Login() {
     
     const unregistered = () => {
         setregister(
-            <Register />
+            <SignupForm />
         )
     }
 
