@@ -32,7 +32,7 @@ function AddVacation(props) {
                 <label htmlFor="image">Image</label> 
                 </div>
                 
-                <input type="submit" value="Post" onClick={handleClose} />
+                <input type="submit" value="Post"  />
                 
                  
             </form>
@@ -53,10 +53,12 @@ function AddVacation(props) {
             info: e.target.info.value
         }
         console.log(newPost)
-
-        newArr = props.arr.push(newPost)
+        console.log(props.arr)
+        newArr = props.arr
+        newArr.push(newPost)
+        console.log(newArr)
         props.add(newArr)
-
+        handleClose()
     }
 
     return (
