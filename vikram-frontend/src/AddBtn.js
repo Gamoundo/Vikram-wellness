@@ -45,7 +45,7 @@ function AddVacation(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(e.target)
-        let newArr;
+        let newArr = props.arr
      let newPost = {
             name: e.target.name.value,
             image: e.target.image.value,
@@ -54,7 +54,7 @@ function AddVacation(props) {
         }
         console.log(newPost)
         console.log(props.arr)
-        newArr = props.arr
+         
         newArr.push(newPost)
         console.log(newArr)
         props.add(newArr)

@@ -17,6 +17,7 @@ import Shop from './Shop';
 import Virtual from './VirtualStudio';
 import Register from './Register';
 import Login from './Login';
+import Classes from './Classes';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/virtual-studio" component={Virtual}/>
+          <Route exact path="/classes" component={Classes}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 
           </Route>

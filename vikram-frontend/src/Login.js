@@ -14,12 +14,12 @@ function Login() {
     const [registered, setregister] =useState(
         <form >
                 <div>
-                <input type="email" name="email" />
-                <label htmlFor="email">Email</label> 
-                </div>
-                <div>
-                <input type="password" name="password" />
-                <label htmlFor="password">Password</label> 
+                    <input type="email" name="email" placeholder="Email" />
+                    
+                    </div>
+                    <div>
+                    <input type="password" name="password" placeholder="Password" />
+             
                 </div>
                 
                 

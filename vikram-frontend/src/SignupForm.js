@@ -13,7 +13,7 @@ function SignupForm () {
     }
 
     console.log(options)
-    console.log(SelectUSState)
+    
     const displayCountries = (arr) => {
       console.log(arr)
         return(arr.map((opt) => {
@@ -107,7 +107,7 @@ function SignupForm () {
     <option value="UM">United States Minor Outlying Islands</option>
     <option value="VI">Virgin Islands</option>
 </select>   
-                    </div>
+</div>
 
 
 
