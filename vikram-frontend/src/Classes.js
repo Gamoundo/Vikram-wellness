@@ -36,35 +36,79 @@ class Classes extends React.Component {
                  
              },
           ],
-          date: new Date().toLocaleString()
+          date: new Date().toLocaleString(),
+          week: []
     }
 
+changeWeek = (r) => {
+    this.setState({week: [...this.state.week, r]})
+}
+week = []
     displaySchedule = () => {
-      let  d = new Date()
-      let  cd = d
-       let day= cd.toLocaleString()
-       console.log(d)
+      
+      let  cd;
+       let day;
+
+       
+       
         for (let i = 0; i < 7; i++) {
+           if (i !== 0) {
+            let  d = new Date()
+            d.setHours(0,0,0)
+            console.log(d)
             d.setDate(d.getDate() + i)
             console.log(d)
             console.log(i)
               cd = d
         day= cd.toLocaleString()
-            return(
-                <h1> {day}</h1>
-            )
+        this.week.push(
+            {
+                date: cd,
+                string: day
+            }) 
+           } else {
+            let  d = new Date()
+            d.setDate(d.getDate() + i)
+            console.log(d)
+            console.log(i)
+              cd = d
+        day= cd.toLocaleString()
+        this.week.push(
+            {
+                date: cd,
+                string: day
+            })
+           }
             
-        } 
+            
+        }   
+
+        
     }
 
+    
+ nums =[]
+    workingLoop = (element) => {
+        for (let i = 0; i < 7; i++) {
+             element = i* i;
+             this.nums.push(element)
+            console.log(element) 
+            console.log(this.nums)
+            
+        } return(
+            <h1> {element}</h1>
+        )
+    } 
+
     render() {
-        
+        this.displaySchedule()
+        console.log([...new Set(this.week)])
         return(
             <div>
                 <h1> Schedule</h1>
                 <p> Need a little more convincing? Send us an email to Try a Class on Us! If you are new to BYW and have never taken a class with us, we will make sure your 1st experience at our virtual or in-person studio is one that have you coming back for more. Let us know which you'd like to try first!</p>
                 <div>
-                    {this.displaySchedule()}
+                    
                     
                 </div>
                 

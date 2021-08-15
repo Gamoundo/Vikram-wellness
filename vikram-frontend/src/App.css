@@ -191,3 +191,10 @@ background-color: purple;
   border-radius: 20px;
   
 }
+
+.highlight {
+  width: 100vw;
+  height: 9vh;
+  background-color: purple;
+
+}

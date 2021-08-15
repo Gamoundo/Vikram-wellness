@@ -155,7 +155,7 @@ class Virtual extends React.Component {
         )
     }
 
-
+classLink = <a href='/classes'> See Class Schedule</a>
 
 
 
@@ -189,7 +189,7 @@ class Virtual extends React.Component {
                     </diV> 
                    <div className="rightSideDiv">
                    <p >{this.state.currentBio}</p>
-                   <button> See Schedule</button>
+                   {this.classLink}
                     </div>
                 </div>
                 <p>Need a little more convincing? Send us an email to <a className="link" href= 'http://localhost:3000/contact'> Try a Class on Us!</a> If you are new to BYW and have never taken a class with us, we will make sure your 1st experience at our virtual or in-person studio is one that have you coming back for more. Let us know which you'd like to try first!</p>
@@ -199,7 +199,7 @@ class Virtual extends React.Component {
                     {this.displayclassSchedule(this.classSchedule)}
                 </div>
                 <p> Check out more in studio and virtual classes.</p>
-                <button> SEE ALL CLASSES</button>   
+                {this.classLink}   
                 <h1> On-Demand</h1>
                 <p> Check out on-demand classes in our video library</p>
                 <button> SEE ALL VIDEOS</button>
