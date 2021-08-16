@@ -43,9 +43,9 @@ class Classes extends React.Component {
 changeWeek = (r) => {
     this.setState({week: [...this.state.week, r]})
 }
-week = []
-    displaySchedule = () => {
-      
+
+    makeWeek = () => {
+      let week= [];
       let  cd;
        let day;
 
@@ -61,7 +61,7 @@ week = []
             console.log(i)
               cd = d
         day= cd.toLocaleString()
-        this.week.push(
+        week.push(
             {
                 date: cd,
                 string: day
@@ -73,7 +73,7 @@ week = []
             console.log(i)
               cd = d
         day= cd.toLocaleString()
-        this.week.push(
+        week.push(
             {
                 date: cd,
                 string: day
@@ -81,35 +81,44 @@ week = []
            }
             
             
-        }   
+        }   return (week)
 
-        
+      
     }
 
+    w = this.makeWeek()
     
- nums =[]
-    workingLoop = (element) => {
-        for (let i = 0; i < 7; i++) {
-             element = i* i;
-             this.nums.push(element)
-            console.log(element) 
-            console.log(this.nums)
-            
-        } return(
-            <h1> {element}</h1>
+      mapWeek = (arr) => {
+        let classes = this.state.classes
+        console.log(this.week)
+        return (arr.map((element) => {
+            console.log(element)
+            return(
+             <div>
+                  
+                 <h1>{element.string}</h1>
+                 
+                 
+                 
+             </div>
+            )
+        }
         )
-    } 
+    
+        )
+    }
+   
 
     render() {
-        this.displaySchedule()
-        console.log([...new Set(this.week)])
+        
+        console.log([...new Set(this.w)])
         return(
             <div>
                 <h1> Schedule</h1>
                 <p> Need a little more convincing? Send us an email to Try a Class on Us! If you are new to BYW and have never taken a class with us, we will make sure your 1st experience at our virtual or in-person studio is one that have you coming back for more. Let us know which you'd like to try first!</p>
                 <div>
                     
-                    
+                {this.mapWeek(this.w)}
                 </div>
                 
                 {/* We need to capture the date and then display classes from that date up to a week ahead. Don't display classes before the time of the date.
