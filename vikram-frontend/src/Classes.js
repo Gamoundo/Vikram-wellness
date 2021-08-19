@@ -8,20 +8,20 @@ class Classes extends React.Component {
                name: 'Bikram Yoga(Virtual)',
                instructor: "Helena",
                time: "4:00am - 5:30am",
-               date: '08/13/21'
+               date: '08/17/21'
                 
             },
             {
                 name: 'Bikram Yoga(Virtual)',
                 instructor: "Steve",
                 time: "4:00pm - 5:30pm",
-                date: '08/14/21'
+                date: '08/18/21'
              },
              {
                 name: 'Bikram Yoga(Virtual)',
                 instructor: "Judy",
                 time: "8:00am - 9:30am",
-                date: '08/15/21'
+                date: '08/20/21'
              },
              {
                 name: 'Bikram Yoga(Virtual)',
@@ -33,7 +33,7 @@ class Classes extends React.Component {
                 name: 'Bikram Yoga(Virtual)',
                 instructor: "Helena",
                 time: "4:00pm - 5:30pm",
-                 
+                date: '08/17/21'
              },
           ],
           date: new Date().toLocaleString(),
@@ -90,18 +90,42 @@ changeWeek = (r) => {
     
       mapWeek = (arr) => {
         let classes = this.state.classes
-        console.log(this.week)
+        
+        
+        
+        
+        
         return (arr.map((element) => {
             console.log(element)
-            return(
-             <div>
-                  
-                 <h1>{element.string}</h1>
-                 
-                 
-                 
-             </div>
-            )
+
+          let displayClass = (el,cl) => {
+                return(cl.map((c) => {
+                    console.log(new Date(c.date))
+                    // console.log(el.date)
+                    // console.log(c)
+                  {if (new Date(c.date) == el.date) {
+                    console.log(c.name)   
+                    return(
+                           <div key={c}>
+                              <h3>{c.name} </h3> 
+                              <p> {c.instructor}</p>
+                              <p> {c.time}</p>
+
+                           </div>
+                       )
+                   }}  
+                }
+                )
+                )
+            }
+           return( 
+              <div>
+                    <h1 className="highlight"> {element.string}</h1>
+                    {displayClass(element, classes)}
+              </div> 
+
+           ) 
+            
         }
         )
     
