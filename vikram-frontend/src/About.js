@@ -60,7 +60,7 @@ const displayBonuses = (arr) => {
           }
         
         return(
-         <div className="c" onClick={displayInfo} >
+         <div  className='bonuses' onClick={displayInfo} >
          <p> {element.name}</p>    
          </div>
         )
@@ -110,11 +110,11 @@ const displayBonuses = (arr) => {
                 </div>
                 <p className="highlight"> You’ll find a variety of in-studio and virtual classes as well as other wellness services that will make it easy for you to build a personalized routine. Our state-of-the-art facilities offer a friendly environment and several amenities for your comfort and convenience</p>
                 <div>
-                    <div> 
+                    <div > 
                         {displayBonuses(bonuses)}
                     </div>
                     <div>
-                        <img src={display} alt='?' />
+                        <img width='500px' height= '500px' src={display} alt='?' />
                     </div>
                 </div>
             </div>

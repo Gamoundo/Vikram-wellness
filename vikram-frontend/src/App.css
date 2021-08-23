@@ -202,3 +202,8 @@ background-color: purple;
   background-color: purple;
 
 }
+
+.bonuses {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
