@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 function About(props) {
@@ -18,6 +18,59 @@ function About(props) {
 
 //     )
 //    }
+const bonuses = [
+    {
+        name: 'Yoga Mat Rental',
+        img: "https://bikramyogawellnessworks.com/video/Yoga_Mat_Rental.mp4"
+    },
+    {
+        name: "Parking",
+        img: "https://bikramyogawellnessworks.com/img/parking.jpg"
+    },
+    {
+        name: "Community Area",
+        img: 'https://bikramyogawellnessworks.com/video/Community_Area.mp4'
+    },
+    {
+        name: 'Spacious Locker Room',
+        img: 'https://bikramyogawellnessworks.com/img/lockers.jpg'
+    }
+]
+
+
+const [display, setdisplay] = useState("")
+
+
+const changeDisplay = (pic) => {
+    setdisplay(
+        pic
+    )
+}
+
+const displayBonuses = (arr) => {
+    return (arr.map((element) => {
+      const  displayInfo = (e) =>{
+   
+            
+            const targetInfo= bonuses.find(bonus => bonus.name == element.name)
+             console.log(targetInfo)
+                changeDisplay(targetInfo.img)
+
+             
+          }
+        
+        return(
+         <div className="c" onClick={displayInfo} >
+         <p> {element.name}</p>    
+         </div>
+        )
+    }
+    )
+
+    )
+}
+
+
     
     return(
         <div >
@@ -28,17 +81,20 @@ function About(props) {
             
             <h3> Our Founders</h3>
             <div > 
-                <div className="locations">
-                    <img  src="" alt="founders pic"/>
-                </div>
-                <div className="blurb">
-                    <p>Kendra Blackett-Dibinga and her husband Omekongo Dibinga are the co-founders of BikramYogaWorks and its four DRIP’T studios. After discovering the benefits of the hot room, Kendra introduced her family to Bikram yoga and all its healing benefits, it became a family affair. Read below to see how Bikram Yoga has changed Kendra's life for the better:
+                <div className="locations"> 
+                    <div >
+                        <img  src="" alt="founders pic"/>
+                    </div>
+                    <div className="blurb">
+                        <p>Kendra Blackett-Dibinga and her husband Omekongo Dibinga are the co-founders of BikramYogaWorks and its four DRIP’T studios. After discovering the benefits of the hot room, Kendra introduced her family to Bikram yoga and all its healing benefits, it became a family affair. Read below to see how Bikram Yoga has changed Kendra's life for the better:
 
-                        "After years of running track and weight training, I developed chronic knee pain, which led to surgery in 2010. Bikram Yoga helped to strengthen and heal my knees. It also helps me manage stress and the demands of a very busy, but rewarding life. Bikram Yoga changed my life. It was the one opportunity that I had to focus completely on myself without the distractions of life. When I introduced Bikram Yoga to my husband, who was suffering from chronic groin pain and residual basketball injuries, it changed his life too."
+                            "After years of running track and weight training, I developed chronic knee pain, which led to surgery in 2010. Bikram Yoga helped to strengthen and heal my knees. It also helps me manage stress and the demands of a very busy, but rewarding life. Bikram Yoga changed my life. It was the one opportunity that I had to focus completely on myself without the distractions of life. When I introduced Bikram Yoga to my husband, who was suffering from chronic groin pain and residual basketball injuries, it changed his life too."
 
-                        As certified instructors, the duo continues to share the practice and provides guidance with any and everyone who is curious about-the practive so that they can also heal their own lives.
-                    </p>
+                            As certified instructors, the duo continues to share the practice and provides guidance with any and everyone who is curious about-the practive so that they can also heal their own lives.
+                        </p>
+                    </div>
                 </div>
+                
 
                 <h3> Our Mission</h3>
                 <p className="highlight"> We strive to provide an exceptional experience from the moment you walk into our studios until you leave our doors. That is why we pride ourselves on making our tight-knit community feel like family. By fostering an inclusive culture, we at DRIP'T™ Studios aim to make every member feel welcomed, heard, and supported in their health and wellness goals.</p>
@@ -53,6 +109,14 @@ function About(props) {
                     
                 </div>
                 <p className="highlight"> You’ll find a variety of in-studio and virtual classes as well as other wellness services that will make it easy for you to build a personalized routine. Our state-of-the-art facilities offer a friendly environment and several amenities for your comfort and convenience</p>
+                <div>
+                    <div> 
+                        {displayBonuses(bonuses)}
+                    </div>
+                    <div>
+                        <img src={display} alt='?' />
+                    </div>
+                </div>
             </div>
 
             {/* {displayAbout(props.About)} */}
