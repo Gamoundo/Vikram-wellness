@@ -18,6 +18,7 @@ import Virtual from './VirtualStudio';
 import Register from './Register';
 import Login from './Login';
 import Classes from './Classes';
+import Personal_Training from './Personal-Training';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           <Route exact path="/press" component={News}/>
           <Route exact path="/careers" component={Careers}/>
           <Route exact path="/retreats" component={Retreats}/>
+          <Route exact path="/personal-training" component={Personal_Training}/>
           <Route exact path="/shop" component={Shop}/>
           <Route exact path="/faq" component={Faq}/>
           <Route exact path="/register" component={Register}/>
