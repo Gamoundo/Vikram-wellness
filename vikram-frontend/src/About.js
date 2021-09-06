@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player'
 
 
 function About(props) {
@@ -114,7 +115,7 @@ const displayBonuses = (arr) => {
                         {displayBonuses(bonuses)}
                     </div>
                     <div>
-                        <img width='500px' height= '500px' src={display} alt='?' />
+                        {display.endsWith('jpg') ? <img width='500px' height= '500px' src={display} alt='?' />: <ReactPlayer url={display}/>}
                     </div>
                 </div>
             </div>
