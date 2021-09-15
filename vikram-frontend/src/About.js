@@ -115,7 +115,7 @@ const displayBonuses = (arr) => {
                         {displayBonuses(bonuses)}
                     </div>
                     <div>
-                        {display.endsWith('jpg') ? <img width='500px' height= '500px' src={display} alt='?' />: <ReactPlayer url={display}/>}
+                        {display.endsWith('jpg') ? <img width='500px' height= '500px' src={display} alt='?' />: <ReactPlayer playing='true' url={display}/>}
                     </div>
                 </div>
             </div>

@@ -207,3 +207,28 @@ background-color: purple;
   display: inline-block;
   padding: 1rem 2rem;
 }
+
+.twodivs {
+  width: 85vw;
+  height: 80vh;
+ 
+  
+  
+  background-color: papayawhip;
+  
+  display: flex;
+  
+  flex-direction: row;
+
+}
+
+.largediv {
+  width: 85vw;
+  height: 100vh;
+  border-radius: 20px;
+  
+  margin: 3rem;
+  background-color: papayawhip;
+  
+  
+}

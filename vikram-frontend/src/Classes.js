@@ -103,8 +103,8 @@ changeWeek = (r) => {
             return(filteredClasses.map((c) => {
                   
                     return(
-                        <div key={c}>
-                    <h3>{c.name} </h3> 
+                        <div className="sidebarItem" key={c.time}>
+                    <h3>{c.name} </h3>  
                     <p> {c.instructor}</p>
                     <p> {c.time}</p>
 
