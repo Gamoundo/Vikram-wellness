@@ -3,6 +3,7 @@ import countryList from 'react-select-country-list'
 import Select from 'react-select'
 import SelectUSState from 'react-select-us-states';
 
+
 function SignupForm () {
 
     const [value, setValue] = useState('United States')
@@ -123,7 +124,32 @@ function SignupForm () {
              
                     </div>
                 <h1> Other Information</h1>
+                    <div>
+                        <select >
+                            <option> Preferred Location</option>
+                           <option> Riverdale</option> 
+                           <option> BikramYogaWorks Online</option>
+                           <option> Ivy City</option>
+                           <option> Mount Vernon</option>
+                           
+                        </select>
+                    </div>
+
+                    <div>
+                        <select >
+                            <option>How did you hear about us?</option>
+                            <option> Advertisements</option>
+                            <option> Groupon</option>
+                            <option> Facebook</option>
+                        </select>
+                    </div>
                 <h1> Emergency Contact Information</h1>
+                <div>
+                <input type="text" name="name" placeholder="Name"/>
+                <input type="text" name="relation" placeholder="Relationship"/>
+                <input type="tel" name= "phone" placeholder="Phone"/>
+                <input type="email" name= "email" placeholder="Email"/>
+                </div>
                 <h1> Liability Release</h1>
                 
                 

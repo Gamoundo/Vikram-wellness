@@ -8,14 +8,14 @@ class Classes extends React.Component {
                name: 'Bikram Yoga(Virtual)',
                instructor: "Helena",
                time: "4:00am - 5:30am",
-               date: '08/28/21'
+               date: '09/18/21'
                 
             },
             {
                 name: 'Bikram Yoga(Virtual)',
                 instructor: "Steve",
                 time: "4:00pm - 5:30pm",
-                date: '08/31/21'
+                date: '09/22/21'
              },
              {
                 name: 'Bikram Yoga(Virtual)',
@@ -100,6 +100,7 @@ changeWeek = (r) => {
           console.log(filteredClasses)  
             console.log(cl.filter(cla => new Date(cla.date) !== el.date))
             console.log(el.date)
+            console.log(new Date("09/23/21"))
             return(filteredClasses.map((c) => {
                   
                     return(
