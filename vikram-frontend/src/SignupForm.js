@@ -33,16 +33,16 @@ function SignupForm () {
             
                 <h1> Personal Information</h1>
                     <div>
-                        <input type="text" name="fname" placeholder="First Name" />
+                        <input type="text" required="true" name="fname" placeholder="First Name" />
                     </div>
                     <div>
-                        <input type="text" name="lname" placeholder="Last Name" />
+                        <input type="text" required="true" name="lname" placeholder="Last Name" />
                     </div>
                     <div>
-                        <input type="tel" name="phone" placeholder="Mobile Phone" />
+                        <input type="tel" required="true" name="phone" placeholder="Mobile Phone" />
                     </div>
                     <div>
-                        <input type="text" name="addr" placeholder="Address" />
+                        <input type="text" required="true" name="addr" placeholder="Address" />
                     </div>
                     <div>
                         <input type="text" name="city" placeholder="City" />
@@ -116,11 +116,11 @@ function SignupForm () {
 
                 <h1> Create Your Login</h1>
                     <div>
-                    <input type="email" name="email" placeholder="Email" />
+                    <input type="email" required="true" name="email" placeholder="Email" />
                     
                     </div>
                     <div>
-                    <input type="password" name="password" placeholder="Password" />
+                    <input type="password" required="true" name="password" placeholder="Password" />
              
                     </div>
                 <h1> Other Information</h1>
@@ -143,15 +143,76 @@ function SignupForm () {
                             <option> Facebook</option>
                         </select>
                     </div>
+                    <div> 
+                        <p> Subscribe to reminders & notifications</p>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Email
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Text
+                                </label>
+                             </div>  
+                        <p> Get a heads-up before bookings or when your schedule changes</p>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Email
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Text
+                                </label>
+                             </div>
+                        <p> Get updates on events and our latest offers</p>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Email
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                <input type="checkbox"/>
+                                Text
+                                </label>
+                             </div>    
+                    </div>
+
                 <h1> Emergency Contact Information</h1>
-                <div>
-                <input type="text" name="name" placeholder="Name"/>
-                <input type="text" name="relation" placeholder="Relationship"/>
-                <input type="tel" name= "phone" placeholder="Phone"/>
-                <input type="email" name= "email" placeholder="Email"/>
-                </div>
+                    <div>
+                    <input type="text" required="true" name="name" placeholder="Name"/>
+                    <input type="text" required="true" name="relation" placeholder="Relationship"/>
+                    <input type="tel" required="true" name= "phone" placeholder="Phone"/>
+                    <input type="email"  required="true"name= "email" placeholder="Email"/>
+                    </div>
                 <h1> Liability Release</h1>
-                
+                    <div>
+                        <input type="textarea" readOnly="true" value="Bikram Yoga Works Liability Waiver: In signing below, I represent and agree as follows:
+1. I have been examined by a licensed physician within the last six months and have been found to be in good physical health and fully able to perform the Bikram Hatha yoga series which will be taught to me at BYW. I understand that my participation in the practice of any strenuous exercise including Hatha Yoga can place me at risk for death or temporary or permanent injury. I agree to assume all risks attendant to my participation in the Bikram Hatha Yoga series offered at BHYR.
+2. I understand that my yoga classes will be 90 minutes long and that I will be engaging in strenuous physical exercise in a room heated to approximately 105 degrees Fahrenheit and 40% humidity. I further understand that these exercises will include , but not be limited to kneeling, standing, bending, and laying prone in static and dynamic postures and that it will be stretching and compressing all parts of my body including but not limited to skin, muscle, joints, bones, tendons, ligaments, nerves, and blood vessels.
+3. I understand that I am to practice yoga in a safe manner and that I am responsible to self-monitor my condition at all times.
+4. I, my heirs, or legal representatives will not hold BYW, its officers, directors, shareholders, partners, instructors, or employees, landlord, and Bikram Choudhury responsible for any injuries suffered by me caused wholly or in part by my failure to faithfully follow instructions of BYW or its instructors or by any physical ailment or impairment of mine not fully disclosed to BYW.
+5. The fees paid herewith and such registration fees paid hereafter are non-refundable as a matter of right; such refunds, if any, as are made shall be entirely within the sole discretion of BYW. Also, I agree that if I bring any personal property to BYW, and I store or leave any personal property at the property, that I do so at my own risk and that none of the releases hall have any liability in the event of loss, damage, unauthorized use (by any person other than a release), theft or injury resulting from the personal property.
+6. I certify that I am at least 16 years old and am able to participate in the hatha yoga series offered by BHYR. Guardians of children under 16 years old can only participate in the children’s yoga program with the written consent of their parent or guardian.
+7. I have read the above release and waiver of liability and fully understand its contents. I voluntarily agree to the terms and conditions stated above and acknowledge that failure to agree to the terms and conditions above would result in revocation of my membership or denial of my participation in yoga classes." />
+                    </div>
+                    <div>
+                        <label>
+                        <input type="checkbox" required="true"/>
+                        I agree with the above terms
+                        </label>
+                    </div>
+                    <div>
+                    <button type="submit"> Create Account </button>
+                    </div>
+                 
                 
             </form>
         </div>
