@@ -86,8 +86,8 @@ const displayBenefits = (arr) => {
           
         }
         return(
-         <div  >
-            <div>
+         <div  className="rate">
+            <div >
                 <p> {element.name}</p>
                 <h1> ${element.price}</h1>
             </div>
@@ -157,12 +157,13 @@ const displayClassPackages = (arr) => {
 
 
     return(
-        <div>
-            <div>
-                <h1>Rates and Packages</h1>
+        <div className='column'>
+            <h1>Rates and Packages</h1>
+            <div className="rates">
+                
                 {displayBenefits(packages)}
             </div>
-            <div>
+            <div >
                 <h1> Class Packages</h1>
                 {displayClassPackages(classPackages)}
             </div>

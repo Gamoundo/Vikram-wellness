@@ -232,3 +232,24 @@ background-color: purple;
   
   
 }
+
+.rate {
+  width: 20vw;
+  height: 10vh;
+  background-color: palegreen;
+}
+
+.rates {
+  width: 20vw;
+  height: 10vh;
+  background-color: palegreen;
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 1rem 2rem;
+}
