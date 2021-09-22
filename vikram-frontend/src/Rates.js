@@ -135,16 +135,27 @@ const classPackages= [
 const displayClassPackages = (arr) => {
     return (arr.map((element) => {
         return(
-         <div>
-             <diV>
+         <div >
+                <div className="pp">
+                <div>
                 <h3>{element.name}</h3>
-                <p style={{color: "orange"}}> {element.condition}</p>
-             </diV>
+                </div>
+                <div>
+                <p style={{color: "blue"}}> {element.condition}</p>
+                </div>
+                
+             
              
              <div>
-                <h3> {element.price}</h3>
-                <button> Buy Now</button>
+             <h3> {element.price}</h3>
              </div>
+                <div>
+                <button> Buy Now</button>
+                </div>
+                </div>
+               
+                
+             
              
              
          </div>
@@ -165,7 +176,10 @@ const displayClassPackages = (arr) => {
             </div>
             <div >
                 <h1> Class Packages</h1>
+                <div className="p">
                 {displayClassPackages(classPackages)}
+                </div>
+                
             </div>
         </div>
         

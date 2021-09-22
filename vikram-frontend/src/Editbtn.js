@@ -7,13 +7,14 @@ function EditBtn(props) {
     // also need to pass down the update state function.
     // would that mean the form is also created by the props?
     // loop through the object sent and make a form based on the values
+    // send down the url?
 
     const handleEdit = () => {
 
     }
 
     const editForm = () => {
-        
+
     }
 
     return(
