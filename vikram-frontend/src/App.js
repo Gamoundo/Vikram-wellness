@@ -20,6 +20,8 @@ import Login from './Login';
 import Classes from './Classes';
 import Personal_Training from './Personal-Training';
 import In_Studio from './In-Studio';
+import Volunteer from './Volunteer';
+import Ambassador from './Ambassador';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
           <Route exact path="/retreats" component={Retreats}/>
           <Route exact path="/personal-training" component={Personal_Training}/>
           <Route exact path="/shop" component={Shop}/>
+          <Route exact path="/volunteer" component={Volunteer}/>
+          <Route exact path="/ambassador" component={Ambassador}/>
           <Route exact path="/faq" component={Faq}/>
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={Login}/>

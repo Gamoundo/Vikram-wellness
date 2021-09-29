@@ -136,7 +136,7 @@ const displayClassPackages = (arr) => {
     return (arr.map((element) => {
         return(
          <div >
-                <div className="pp">
+                <div className="row">
                 <div>
                 <h3>{element.name}</h3>
                 </div>
@@ -168,7 +168,7 @@ const displayClassPackages = (arr) => {
 
 
     return(
-        <div className='column'>
+        <div >
             <h1>Rates and Packages</h1>
             <div className="rates">
                 
@@ -176,7 +176,7 @@ const displayClassPackages = (arr) => {
             </div>
             <div >
                 <h1> Class Packages</h1>
-                <div className="p">
+                <div className="column">
                 {displayClassPackages(classPackages)}
                 </div>
                 

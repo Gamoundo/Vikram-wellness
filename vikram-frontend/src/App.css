@@ -219,7 +219,7 @@ background-color: purple;
   display: flex;
   
   flex-direction: row;
-
+  margin: 4rem;
 }
 
 .largediv {
@@ -231,6 +231,11 @@ background-color: purple;
   background-color: papayawhip;
   
   
+}
+
+.smalldiv {
+  width: 40vw;
+  text-align: left;
 }
 
 .rate {
@@ -248,23 +253,25 @@ background-color: purple;
   justify-content: space-between;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  padding: 1rem 2rem;
-}
 
-.p {
+
+.column {
   display: flex;
   flex-direction: column;
   background-color: papayawhip;
 }
 
-.pp {
+.row {
   display: flex;
   flex-direction: row;
   border-radius: 20px;
   text-align: center;
   justify-content: space-between;
+}
+
+.maindiv {
+  background-color: grey;
+  height: 60vh;
+  width: 70vw;
+  margin: 3rem;
 }
