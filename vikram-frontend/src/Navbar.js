@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
+
+
+function Navbar() {
+
+  const [hover, sethover] = useState(false);
 const link = {
     width: '50px',
     padding: '4px',
@@ -57,7 +62,8 @@ const link = {
   const displayNavItems = (arr) => {
     return (arr.map((element) => {
         return(
-          <NavLink
+          
+              <NavLink
           to=  {element.comp}
           
           exact
@@ -67,15 +73,22 @@ const link = {
           activeStyle={{
             background: 'purple'
           }}
-          >{element.title}</NavLink>
+          onMouseEnter={() => sethover(true)}
+          onMouseLeave={()=> sethover(false)}
+          >{element.title}
+          {hover && <div className='dropdown'><ul> <a href={element.comp}> {element.title}</a></ul></div>} 
+          </NavLink>
+            
+          
+
+          
+          
         )
     }
     )
 
     )
    }
-
-function Navbar() {
 
     return(
         <div className="nav">

@@ -275,3 +275,10 @@ background-color: purple;
   width: 70vw;
   margin: 3rem;
 }
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 100px;
+  overflow: hidden;
+}
