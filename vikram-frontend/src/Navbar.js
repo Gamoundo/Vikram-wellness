@@ -5,7 +5,14 @@ import { NavLink } from 'react-router-dom';
 
 function Navbar() {
 
-  const [hover, sethover] = useState(false);
+  const [hover, sethover] = useState(
+    <div>
+
+    </div>
+  );
+  const [selected, setselected] = useState("");
+  
+
 const link = {
     width: '50px',
     padding: '4px',
@@ -73,15 +80,16 @@ const link = {
           activeStyle={{
             background: 'purple'
           }}
-          onMouseEnter={() => sethover(true)}
-          onMouseLeave={()=> sethover(false)}
+          
+          // onMouseEnter={() => sethover(<div className='dropdown'><ul> <a href={element.comp}> {element.title}</a></ul></div>)}
+          // onMouseLeave={()=> sethover("")}
+          
           >{element.title}
-          {hover && <div className='dropdown'><ul> <a href={element.comp}> {element.title}</a></ul></div>} 
+          {/* {element.title  === "Rates" && hover}  */}
           </NavLink>
             
           
-
-          
+ 
           
         )
     }
@@ -89,8 +97,10 @@ const link = {
 
     )
    }
-
+   console.log(hover)
+   console.log(selected)
     return(
+       
         <div className="nav">
             
           {displayNavItems(navItems)}

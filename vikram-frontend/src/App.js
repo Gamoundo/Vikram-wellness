@@ -26,6 +26,36 @@ import Ambassador from './Ambassador';
 
 function App() {
 
+let users = [
+  {
+    name: "Ali",
+    password: "banana",
+    status: "customer",
+    cart: []
+  },
+  {
+    name: "Halal",
+    password: "panini",
+    status: "customer",
+    cart: []
+  },
+  {
+    name: "Sandy",
+    password: "witch",
+    status: "customer",
+    cart: []
+  }
+]
+
+const addUser = (user) => {
+  users.find(user) ? alert("user already exist") : users.push(user)
+}
+
+const signIn = () => {
+  
+}
+
+
    let locations = [
     {
       area: "Riverdale Park",

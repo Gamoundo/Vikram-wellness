@@ -82,29 +82,28 @@ const displayBonuses = (arr) => {
             
             <h3> Our Founders</h3>
             <div > 
-                <div className="locations"> 
-                    <div >
+                <div className="mediumdiv"> 
+                    <div className='smalldiv'>
                         <img  src="" alt="founders pic"/>
                     </div>
-                    <div className="blurb">
-                        <p>Kendra Blackett-Dibinga and her husband Omekongo Dibinga are the co-founders of BikramYogaWorks and its four DRIP’T studios. After discovering the benefits of the hot room, Kendra introduced her family to Bikram yoga and all its healing benefits, it became a family affair. Read below to see how Bikram Yoga has changed Kendra's life for the better:
+                    <div className="smalldiv">
+                        <p>Kendra Blackett-Dibinga and her husband Omekongo Dibinga are the co-founders of BikramYogaWorks and its four DRIP’T studios. After discovering the benefits of the hot room, Kendra introduced her family to Bikram yoga and all its healing benefits, it became a family affair. Read below to see how Bikram Yoga has changed Kendra's life for the better:</p>
 
-                            "After years of running track and weight training, I developed chronic knee pain, which led to surgery in 2010. Bikram Yoga helped to strengthen and heal my knees. It also helps me manage stress and the demands of a very busy, but rewarding life. Bikram Yoga changed my life. It was the one opportunity that I had to focus completely on myself without the distractions of life. When I introduced Bikram Yoga to my husband, who was suffering from chronic groin pain and residual basketball injuries, it changed his life too."
+                        <p>"After years of running track and weight training, I developed chronic knee pain, which led to surgery in 2010. Bikram Yoga helped to strengthen and heal my knees. It also helps me manage stress and the demands of a very busy, but rewarding life. Bikram Yoga changed my life. It was the one opportunity that I had to focus completely on myself without the distractions of life. When I introduced Bikram Yoga to my husband, who was suffering from chronic groin pain and residual basketball injuries, it changed his life too."</p>
 
-                            As certified instructors, the duo continues to share the practice and provides guidance with any and everyone who is curious about-the practive so that they can also heal their own lives.
-                        </p>
+                        <p>    As certified instructors, the duo continues to share the practice and provides guidance with any and everyone who is curious about-the practive so that they can also heal their own lives.</p>
                     </div>
                 </div>
                 
 
                 <h3> Our Mission</h3>
                 <p className="highlight"> We strive to provide an exceptional experience from the moment you walk into our studios until you leave our doors. That is why we pride ourselves on making our tight-knit community feel like family. By fostering an inclusive culture, we at DRIP'T™ Studios aim to make every member feel welcomed, heard, and supported in their health and wellness goals.</p>
-                <div className="locations">
-                    <div> 
+                <div className="mediumdiv">
+                    <div className='smalldiv'> 
                         <img  src="" alt="instructors"/>
 
                     </div>
-                    <div className="blurb">
+                    <div className="smalldiv">
                         <p> Whether you are a veteran yogi or new to Bikram yoga and other heated classes, our community is happy that your fitness journey led you to us! You’ll find a variety of in-studio and virtual classes as well as other wellness services that will make it easy for community is happy that your fitness journey led you to us!</p>
                     </div>
                     
@@ -114,8 +113,11 @@ const displayBonuses = (arr) => {
                     <div > 
                         {displayBonuses(bonuses)}
                     </div>
-                    <div>
+                    <div className="bigdiv">
+                        <div className="mediumdiv">
                         {display.endsWith('jpg') ? <img width='500px' height= '500px' src={display} alt='?' />: <ReactPlayer playing='true' url={display}/>}
+                        </div>
+                        
                     </div>
                 </div>
             </div>

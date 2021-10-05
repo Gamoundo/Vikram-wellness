@@ -203,6 +203,13 @@ background-color: purple;
 
 }
 
+.bigdiv {
+  width: 100vw;
+  height: 90vh;
+  background-color: rgb(160, 134, 160);
+  
+}
+
 .bonuses {
   display: inline-block;
   padding: 1rem 2rem;
@@ -251,6 +258,19 @@ background-color: purple;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.mediumdiv {
+  height: 70vh;
+  width: 70vw;
+  
+  
+  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  padding-top: 2rem;
+  padding-left: 10rem;
 }
 
 
