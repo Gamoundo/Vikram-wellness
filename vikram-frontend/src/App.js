@@ -23,6 +23,7 @@ import In_Studio from './In-Studio';
 import Volunteer from './Volunteer';
 import Ambassador from './Ambassador';
 import Virtual from './Virtual';
+import Homepage from './Homepage';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -86,6 +87,7 @@ const signIn = () => {
           <h1> Bikram Wellness</h1>
           <Navbar />
           <Route exact path="/about" component={About}/>
+          <Route exact path="/" component={Homepage}/>
           <Route exact path="/training" component={Training}/>
           <Route exact path="/rates" component={Rates}/>
           <Route exact path="/team" component={Team}/>

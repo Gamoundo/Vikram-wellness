@@ -1,6 +1,13 @@
 body{
   background-color: plum;
 }
+a {
+  text-decoration: none;
+}
+
+p {
+  color: blueviolet;
+}
 
 .App {
   text-align: center;
@@ -329,6 +336,12 @@ padding: 4px;
 margin: 0 6px 6px;
 }
 
-a {
-  text-decoration: none;
+
+
+.bubbleLink {
+  border-radius: 30px;
+  background-color: orange;
+  color: white;
+  width: 100px;
+  height: 40px;
 }
