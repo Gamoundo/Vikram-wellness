@@ -39,7 +39,7 @@ const bonuses = [
 ]
 
 
-const [display, setdisplay] = useState("")
+const [display, setdisplay] = useState("https://bikramyogawellnessworks.com/video/Yoga_Mat_Rental.mp4")
 
 
 const changeDisplay = (pic) => {

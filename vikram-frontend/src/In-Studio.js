@@ -28,10 +28,10 @@ function In_Studio() {
         <div>
             <h1> In Studio</h1>
             <p> Meet Us In The Hot Room</p>
-            <div className="largediv">
+            <div className="xldiv">
                 <h2>{studioDeets.title}</h2>
                 <div className="twodivs">
-                    <div>
+                    <div >
                         <ReactPlayer url={studioDeets.video} />
                     </div>
                     <div className="retreatp">
@@ -41,10 +41,10 @@ function In_Studio() {
                 <a target='_blank' style={{color: "blue"}} href="https://bikramyogawellnessworks.com/img/BYW_Safety_V2.pdf">Click Here To Learn More About Our Covid Safety Guidelines</a>
                     </div>
                 </div>
-                
+                <a className="link" href="http://localhost:3000/classes"> Book Our In-Studio Class NOW</a>
             </div>
             
-                <a className="link" href="http://localhost:3000/classes"> Book Our In-Studio Class NOW</a>
+                
         </div>
     )
 }

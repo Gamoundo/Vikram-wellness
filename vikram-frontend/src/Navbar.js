@@ -23,10 +23,10 @@ const link = {
   }
 
   const navItems = [
-    {
-      comp: "/shop",
-      title: "Shop"
-    },
+    // {
+    //   comp: "https://shopbyw.square.site/",
+    //   title: "Shop"
+    // },
     {
       comp: "/about",
       title: "About Us"
@@ -102,7 +102,7 @@ const link = {
     return(
        
         <div className="nav">
-            
+            <a href='https://shopbyw.square.site/'> Shop </a>
           {displayNavItems(navItems)}
         </div>
     )

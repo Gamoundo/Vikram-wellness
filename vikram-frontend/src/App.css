@@ -240,9 +240,27 @@ background-color: purple;
   
 }
 
+.xldiv {
+  width: 90vw;
+  height: 120vh;
+  text-align: left;
+  
+  
+  background-color: papayawhip;
+  
+  
+}
+
 .smalldiv {
   width: 40vw;
   text-align: left;
+}
+.smalldivLeft {
+  width: 40vw;
+  text-align: left;
+  justify-content: left;
+  align-items: flex-start;
+  margin-right: 2rem;
 }
 
 .rate {
@@ -301,4 +319,16 @@ background-color: purple;
   top: 58px;
   width: 100px;
   overflow: hidden;
+}
+
+.nav a{
+color: pink;
+
+width: 50px;
+padding: 4px;
+margin: 0 6px 6px;
+}
+
+a {
+  text-decoration: none;
 }

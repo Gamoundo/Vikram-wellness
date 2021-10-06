@@ -28,8 +28,8 @@ function SignupForm () {
       )  
     }
     return(
-        <div >
-            <form >
+        <div>
+            <form  >
             
                 <h1> Personal Information</h1>
                     <div>
@@ -115,7 +115,7 @@ function SignupForm () {
 
 
                 <h1> Create Your Login</h1>
-                    <div>
+                    <div >
                     <input type="email" required="true" name="email" placeholder="Email" />
                     
                     </div>

@@ -3,7 +3,7 @@ import React from "react";
 class Virtual extends React.Component {
 
     state= {
-        currentBio: "Toad"
+        currentBio: "Bikram Yoga is the original hot yoga system of 26 postures and 2 breathing exercises performed in a heated room of 105-110 degrees and 40-50% humidity. It is a total body system designed to improve flexibility and range of motion, strength and endurance. The class is 90 minutes long."
     }
         
     

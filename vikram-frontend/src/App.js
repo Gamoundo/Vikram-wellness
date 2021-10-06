@@ -14,7 +14,7 @@ import Careers from './Careers';
 import Faq from './Faq';
 import Retreats from './Retreats';
 import Shop from './Shop';
-import Virtual from './VirtualStudio';
+import Virtual_Studio from './VirtualStudio';
 import Register from './Register';
 import Login from './Login';
 import Classes from './Classes';
@@ -22,6 +22,7 @@ import Personal_Training from './Personal-Training';
 import In_Studio from './In-Studio';
 import Volunteer from './Volunteer';
 import Ambassador from './Ambassador';
+import Virtual from './Virtual';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
@@ -52,7 +53,7 @@ const addUser = (user) => {
 }
 
 const signIn = () => {
-  
+
 }
 
 
@@ -99,7 +100,8 @@ const signIn = () => {
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/in-studio" component={In_Studio}/>
-          <Route exact path="/virtual-studio" component={Virtual}/>
+          <Route exact path="/virtual" component={Virtual}/>
+          <Route exact path="/virtual-studio" component={Virtual_Studio}/>
           <Route exact path="/classes" component={Classes}/>
           <Route exact path= '/contact'  render={ routerProps => <Contact {...routerProps} locations={locations}/>}>
 
